@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MathJS calculator</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+                     
+<script src="https://unpkg.com/mathjs@6.6.4/dist/math.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="Treant.css">
+<link rel="stylesheet" href="custom-colored.css">
+
+</head>
+<body>
+<div id="jsondiv"><textarea id="json"></textarea></div>
+<div id="add-equation">
+<form id="add-equation_form">
+  <label for="eq">Enter an equation:</label>
+  <input type="text" id="eq" value="sqrt(75 / 3) - sin(pi / 4)^2" />
+	<label for="eqvar">Enter Equation output Variable</label>
+	<input type="text" id="eqvar" value="a" />
+  <input type="submit" value="Add Equation" />
+
+  <label for="descriptioninput">
+  <textarea id="descriptioninput"></textarea>
+</form>
+<div id="add-equation_render"></div>
+</div>
+
+<div id="equationtree"></div>
+
+<div id="graphbutton_div">
+	<button id="graphbuttonz" onclick="setupCalculator()">Calculate</button>
+</div>
+<div id="graphstuff">
+<button id="hidegraph" onclick="hideGraph()">x</button>
+<form id="graphvariables"></form>
+<h3 id="output"></h3>
+</div>
+
+<script src="vendor/raphael.js"></script>
+<script src="Treant.js"></script>
+
+<script src="oldandsad.js"></script>
+
+<script src="equations.js"></script>
+<script src="custom-colored.js"></script>
+
+
+</body>
+</html>
